@@ -1,0 +1,50 @@
+# ============================================================
+# YouTube Shorts Automation Bot - Dependencies
+# ============================================================
+
+# --- Core ---
+setuptools<81                 # openai-whisper setup.py still imports pkg_resources
+python-dotenv==1.0.0
+requests==2.31.0
+aiohttp==3.9.1
+asyncio==3.4.3
+
+# --- LLM APIs ---
+anthropic==0.25.0
+openai==1.14.0
+
+# --- Text-to-Speech ---
+gTTS==2.5.1                    # fallback TTS used by voice_generator.py
+
+# --- Trend Detection ---
+praw==7.7.1                    # Reddit API
+pytrends==4.9.2                # Google Trends
+beautifulsoup4==4.12.3
+lxml==5.1.0
+
+# --- Video Processing ---
+ffmpeg-python==0.2.0
+
+# --- Speech-to-Text (subtitle alignment) ---
+torch==2.1.2
+numpy==1.26.4
+
+# --- YouTube Upload ---
+google-api-python-client==2.118.0
+google-auth-httplib2==0.2.0
+google-auth-oauthlib==1.2.0
+
+# --- Database ---
+# sqlite3 is built-in to Python
+
+# --- Scheduling ---
+schedule==1.2.1
+APScheduler==3.10.4
+
+# --- Utilities ---
+Pillow==10.2.0                 # image manipulation
+tqdm==4.66.2                   # progress bars
+tenacity==8.2.3                # retry logic
+loguru==0.7.2                  # structured logging
+pydantic==2.6.1                # data validation
+python-slugify==8.0.4          # filename sanitization
